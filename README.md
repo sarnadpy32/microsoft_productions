@@ -1,16 +1,16 @@
 <table style="margin-left:auto;margin-right:auto;">
     <tr>
         <td style="text-align:center">
-            <h1><a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/Phase%201%20-%20Project.ipynb">Project</a>
+            <h2><a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/Phase%201%20-%20Project.ipynb">Project</a>
             &ensp;&bull;&ensp;
-            <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/notebook.pdf">Project - PDF Version</a></h1>
+            <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/notebook.pdf">Project - PDF Version</a></h2>
         </td>
     </tr>
     <tr>
         <td style="text-align:center">
-            <h1><a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/Presentation.pptm">Presentation</a>
+            <h2><a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/Presentation.pptm">Presentation</a>
                 &ensp;&bull;&ensp;
-                <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/pdf_presentation.pdf">Presentation - PDF Version</a></h1>
+                <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/pdf_presentation.pdf">Presentation - PDF Version</a></h2>
         </td>
     </tr>
 </table>
