@@ -466,10 +466,6 @@ ORDER BY start_year, primary_title;"""
 
 &nbsp;&nbsp;&nbsp;&nbsp;By using this feature, Microsoft can take full advantage of the insights gained through my analysis and they will be provided with everything they need to make a forceful entry into the streaming market.
 
-# Closing Database Connection
-
-# Printing Categories for All of the Category Types to put them in the Presentation
-
 <a id='markdown_crew'></a>
 <img src="special_texts/mark_crew.svg"/>
 <hr style="border:1.2px solid #009E25"> </hr>
