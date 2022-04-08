@@ -1,12 +1,21 @@
+<table align="center" border="0">
+  <tr>
+    <td>
+        
 | Main Version | PDF Version |
 | :-: | :-: |
 | <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/Phase%201%20-%20Project.ipynb">Analysis</a> | <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/notebook.pdf">Analysis</a> |
-| <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/Presentation.pptm">Presentation<a> | <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/pdf_presentation.pdf">Presentation</a> |
+| <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/Presentation.pptm">Presentation<a> | <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/pdf_presentation.pdf">Presentation</a> |</td>
+
+  </tr>
+</table>
 
 <img src="special_texts/sect_project_overview.svg" />
 <hr style="border:1.2px solid #009E25"> </hr>
 &nbsp;&nbsp;&nbsp;&nbsp;For my project, I utilized data from the three sources shown below to gain insight into the film industry in order to provide useful recommendations for Microsoft as they prepare to enter the streaming media market.
-<img src="images/combined_logos_new_2.png" />
+<p align="center">
+    <img src="images/combined_logos_new_2.png" />
+</p>
 
 <img src="special_texts/sect_tab_cont.svg" />
 <hr style="border:1.2px solid #009E25"> </hr>
@@ -18,9 +27,9 @@
     * **[Main Visualization Function](#sub_sect_main_viz_func)**
 * **[Standards for Qualifying as Important](#sect_standards)**
 * **[Creating & Plotting the Aggregate DataFrames](#sect_agg_dfs)**
-    * **[Important Genres Analysis](#sub_sect_import_gs)**
-    * **[Important Creative Types Analysis](#sub_sect_import_cts)**
-    * **[Important Combinations Analysis](#sub_sect_import_combos)**
+    * **[Financially Important Genres](#sub_sect_import_gs)**
+    * **[Financially Important Creative Types](#sub_sect_import_cts)**
+    * **[Financially Important Combinations](#sub_sect_import_combos)**
     * **[MPA Ratings Priorities](#sub_sect_rat_priorities)**
 * **[Recommendations for Microsoft](#sect_final_reco)**
     * **[Recommendations for PG-13 Content](#sub_sect_pg13_reco)**
@@ -89,7 +98,9 @@
 <hr style="border:1.2px solid #009E25"> </hr>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For this project I used data provided to me from <a href="https://www.imdb.com/">IMDb</a> and <a href="https://www.the-numbers.com/">The Numbers</a>, by <a href="https://flatironschool.com/">Flatiron School</a>.
 I also applied for and received an academic dataset from <a href="https://www.opusdata.com/">OpusData</a>, which is owned and operated by the same company as The Numbers, for which it provides data services.
+<br>
 
+<br>
 <img src="special_texts/sub_sect_import_invest.svg" />
 <hr style="border:1.2px solid #2222FF"> </hr>
 
@@ -143,8 +154,9 @@ I also applied for and received an academic dataset from <a href="https://www.op
 &ensp;Any new columns that I created, based on the data already in the corresponding table, to enhance my analysis, were also given an identifying color.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As previously discussed, I combined the `tn_movie_budgets` and `tn_extra` dataframes into the `tn_full` dataframe prior to creating the SQL database.
-
-<img src="images/final_sql_diagram.png" />
+<p align="center">
+    <img src="images/final_sql_diagram.png" />
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In order to create the database, I first updated the lists of the dataframes and their names to iterate through to create the database.
 
@@ -182,34 +194,50 @@ WHERE genres NOT Null;"""
 <img src="special_texts/sub_sect_main_fin_df_details.svg"/>
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I created tables in markdown format to be displayed in the notebook that show the details of the main category type and each subcategory type.
-&ensp;To do so, I first created a function to format the numerical values accordingly.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I created tables in markdown format to be displayed in the README file on GitHub, and later in HTML for the notebook markdown on GitHub, that show the details of the main category type and each subcategory type.
+&ensp;To do so, I first created functions to format the numerical values accordingly.
 
-<center>The table below shows the number of categories within the main category type.</center>
+<p align="center">The table below shows the number of categories within the main category type.</p>
+
+<table align="center" border="0">
+  <tr>
+    <td>
 
 | Main Category Type | Number of Categories |
 | :-: | :-: |
-| Ratings | 5 |
+| Ratings | 5 |</td>
 
-<center>The table below shows the number of subcategories within each subcategory type.</center>
+  </tr>
+</table>
+
+<p align="center">The table below shows the number of subcategories within each subcategory type.</p>
+
+<table align="center" border="0">
+  <tr>
+    <td>
 
 | Subcategory Types | Number of Subcategories |
 | :-: | :-: |
 | Genres | 11 |
 | Creative Types | 9 |
-| Genre & Creative Type<br>Combinations | 56 |
+| Genre & Creative Type<br>Combinations | 56 |</td>
 
-<details><summary><strong><center>Click Here to see more details for the Rating category type and Genre and Creative Type subcategory types.</center></strong></summary>
+  </tr>
+</table>
+
+<a id="extra_details"></a>
+
+<details align="center"><summary><strong>Click Here to see more details for the Rating category type and Genre and Creative Type subcategory types.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-<details><summary><strong><center>Click Here to see the explore the Rating category type.</center></strong></summary>
+<details align="center"><summary><strong>Click Here to see the explore the Rating category type.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-<details><summary><strong><center>Click Here to see the number of Movies with each Rating category.</center></strong></summary>
+<details align="center"><summary><strong>Click Here to see the number of Movies with each Rating category.</strong></summary>
 <p>
 
 |  Ratings  |  Count  |
@@ -225,7 +253,7 @@ WHERE genres NOT Null;"""
     
 <br>
     
-<details><summary><strong><center>Click Here to see the extended details tables for the Rating categories.</center></strong></summary>
+<details align="center"><summary><strong>Click Here to see the extended details tables for the Rating categories.</strong></summary>
 <p>
     
 |  Worldwide Gross<br><br>Rating  |  count  |         mean          |          std          |          min           |         25%          |          50%          |          75%          |          max          |
@@ -255,12 +283,12 @@ WHERE genres NOT Null;"""
 
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-<details><summary><strong><center>Click Here to see the explore the Genre subcategory type.</center></strong></summary>
+<details align="center"><summary><strong>Click Here to see the explore the Genre subcategory type.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-<details><summary><strong><center>Click Here to see the number of Movies with each Genre subcategory.</center></strong></summary>
+<details align="center"><summary><strong>Click Here to see the number of Movies with each Genre subcategory.</strong></summary>
 <p>
 
 |       Genres        |  Count  |
@@ -282,7 +310,7 @@ WHERE genres NOT Null;"""
 
 <br>
     
-<details><summary><strong><center>Click Here to see the extended details tables for the Genre subcategories.</center></strong></summary>
+<details align="center"><summary><strong>Click Here to see the extended details tables for the Genre subcategories.</strong></summary>
 <p>
 
 |  Worldwide Gross<br><br>Genre  |  count  |         mean          |          std          |          min           |          25%          |          50%          |          75%          |          max          |
@@ -324,12 +352,12 @@ WHERE genres NOT Null;"""
 
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-<details><summary><strong><center>Click Here to see the explore the Creative Type subcategory type.</center></strong></summary>
+<details align="center"><summary><strong>Click Here to see the explore the Creative Type subcategory type.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-<details><summary><strong><center>Click Here to see the number of Movies with each Creative Type subcategory.</center></strong></summary>
+<details align="center"><summary><strong>Click Here to see the number of Movies with each Creative Type subcategory.</strong></summary>
 <p>
 
 |     Creative Types      |  Count  |
@@ -349,7 +377,7 @@ WHERE genres NOT Null;"""
 
 <br>
 
-<details><summary><strong><center>Click Here to see the extended details tables for the Creative Type subcategories.</center></strong></summary>
+<details align="center"><summary><strong>Click Here to see the extended details tables for the Creative Type subcategories.</strong></summary>
 <p>
 
 |  Worldwide Gross<br><br>Creative_Type  |  count  |         mean          |          std          |          min           |          25%          |          50%          |          75%          |          max          |
@@ -414,15 +442,21 @@ ORDER BY start_year, primary_title;"""
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I created more tables in markdown format for the details on the crew member types.
 
-<center>The table below shows the number of movies that had data for each crew member type,</center>
-<center>as well as the number of crew members that were in each each crew dataframe.</center>
+<p align="center">The table below shows the number of movies that had data for each crew member type, <br> as well as the number of crew members that were in each each crew dataframe.</p>
 
+<table align="center" border="0">
+  <tr>
+    <td>
+        
 | Crew Member Types | Number of Movies<br>with data for each<br>Crew Member Type | Number of Crew Members<br>for each<br>Crew Member Type |
 | :-: | :-: | :-: |
 | Directors | 954 | 678 |
 | Writers | 882 | 1491 |
 | Actors | 951 | 1096 |
-| Actresses | 855 | 700 |
+| Actresses | 855 | 700 |</td>
+
+  </tr>
+</table>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I closed the SQL query after it was no longer needed.
 &ensp;As this was an academic project meant to be run from start to finish, there was no reason to commit and save the changes to the database.
@@ -512,10 +546,7 @@ ORDER BY start_year, primary_title;"""
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I used the visualizations created in this section to determine my Genres recommendations for each MPA Rating.
 
 <br>
-<a href="_____________"><center>Click here to see the code for the Important Genres.</center></a>
-<br>
-
-<details><summary><strong><center>Click here to see example visualizations.</center></strong></summary>
+<details align="center"><summary><strong>Click here to see example visualizations.</strong></summary>
 <p>
 
 <hr style="border:1.2px solid #2222FF"> </hr>
@@ -533,10 +564,7 @@ ORDER BY start_year, primary_title;"""
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I used the visualizations created in this section to determine my Creative Types recommendations for each MPA Rating.
 
 <br>
-<a href="_____________"><center>Click here to see the code for the Important Creative Types.</center></a>
-<br>
-
-<details><summary><strong><center>Click here to see Example Visualizations.</center></strong></summary>
+<details align="center"><summary><strong>Click here to see example visualizations.</strong></summary>
 <p>
 
 <hr style="border:1.2px solid #2222FF"> </hr>
@@ -554,10 +582,7 @@ ORDER BY start_year, primary_title;"""
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I used the visualizations created in this section to determine my Genre & Creative Type Combinations recommendations for each MPA Rating.
 
 <br>
-<a href="_____________"><center>Click here to see the code for the Important Genre & Creative Type Combinations.</center></a>
-<br>
-
-<details><summary><strong><center>Click here to see Example Visualizations.</center></strong></summary>
+<details align="center"><summary><strong>Click here to see example visualizations.</strong></summary>
 <p>
 
 <hr style="border:1.2px solid #2222FF"> </hr>
@@ -575,10 +600,7 @@ ORDER BY start_year, primary_title;"""
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I used the visualizations created in this section to determine the financial importance of the MPA Ratings to order my recommendations accordingly.
 
 <br>
-<a href="_____________"><center>Click here to see the code for the MPA Ratings Priorities.</center></a>
-<br>
-
-<details><summary><strong><center>Click here to see the MPA Ratings visualizations.</center></strong></summary>
+<details align="center"><summary><strong>Click here to see the MPA Ratings visualizations.</strong></summary>
 <p>
 
 <hr style="border:1.2px solid #2222FF"> </hr>
@@ -629,7 +651,7 @@ ORDER BY start_year, primary_title;"""
 <img src="special_texts/sub_sect_pg13_reco.svg"/>
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-<table width="99%" border=0 cellspacing="0" cellpadding="0">
+<table align="center">
 
 <tr><th colspan="3"><center>PG-13</center></th></tr>
 
@@ -662,12 +684,12 @@ ORDER BY start_year, primary_title;"""
 </td></tr>  
 </table>
 
-<details><summary><strong><center>Click here to view the visualizations on which I based the PG-13 recommendations.</center></strong></summary>
+<details align="center"><summary><strong>Click here to view the visualizations on which I based the PG-13 recommendations.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-<details><summary><strong><center>Click here to view the visualizations on which I based my recommendations for the PG-13 Important Genres.</center></strong></summary>
+<details align="center"><summary><strong>Click here to view the visualizations on which I based my recommendations for the PG-13 Important Genres.</strong></summary>
 <p>
 
 <table width="99%" border=0 cellspacing="0" cellpadding="0">
@@ -702,7 +724,7 @@ ORDER BY start_year, primary_title;"""
 
 <br>
 
-<details><summary><strong><center>Click here to view the visualizations on which I based my recommendations for the PG-13 Important Creative Types.</center></strong></summary>
+<details align="center"><summary><strong>Click here to view the visualizations on which I based my recommendations for the PG-13 Important Creative Types.</strong></summary>
 <p>
 
 <table width="99%" border=0 cellspacing="0" cellpadding="0">
@@ -737,7 +759,7 @@ ORDER BY start_year, primary_title;"""
 
 <br>
 
-<details><summary><strong><center>Click here to view the visualizations on which I based my recommendations for the PG-13 Important Genre & Creative Type Combinations.</center></strong></summary>
+<details align="center"><summary><strong>Click here to view the visualizations on which I based my recommendations for the PG-13 Important Genre & Creative Type Combinations.</strong></summary>
 <p>
 
 <table width="99%" border=0 cellspacing="0" cellpadding="0">
@@ -777,7 +799,7 @@ ORDER BY start_year, primary_title;"""
 <img src="special_texts/sub_sect_pg_reco.svg"/>
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-<table width="99%" border=0 cellspacing="0" cellpadding="0">
+<table align="center">
     
 <tr><th colspan="3"><center>PG</center></th></tr>
 
@@ -805,12 +827,12 @@ ORDER BY start_year, primary_title;"""
 </td></tr> 
 </table>
 
-<details><summary><strong><center>Click here to view the visualizations on which I based the PG recommendations.</center></strong></summary>
+<details align="center"><summary><strong>Click here to view the visualizations on which I based the PG recommendations.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-<details><summary><strong><center>Click here to view the visualizations on which I based my recommendations for the PG Important Genres.</center></strong></summary>
+<details align="center"><summary><strong>Click here to view the visualizations on which I based my recommendations for the PG Important Genres.</strong></summary>
 <p>
 
 <table width="99%" border=0 cellspacing="0" cellpadding="0">
@@ -845,7 +867,7 @@ ORDER BY start_year, primary_title;"""
 
 <br>
 
-<details><summary><strong><center>Click here to view the visualizations on which I based my recommendations for the PG Important Creative Types.</center></strong></summary>
+<details align="center"><summary><strong>Click here to view the visualizations on which I based my recommendations for the PG Important Creative Types.</strong></summary>
 <p>
 
 <table width="99%" border=0 cellspacing="0" cellpadding="0">
@@ -880,7 +902,7 @@ ORDER BY start_year, primary_title;"""
 
 <br>
 
-<details><summary><strong><center>Click here to view the visualizations on which I based my recommendations for the PG Important Genre & Creative Type Combinations.</center></strong></summary>
+<details align="center"><summary><strong>Click here to view the visualizations on which I based my recommendations for the PG Important Genre & Creative Type Combinations.</strong></summary>
 <p>
 
 <table width="99%" border=0 cellspacing="0" cellpadding="0">
@@ -920,7 +942,7 @@ ORDER BY start_year, primary_title;"""
 <img src="special_texts/sub_sect_r_reco.svg"/>
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-<table width="99%" border=0 cellspacing="0" cellpadding="0">
+<table align="center">
     
 <tr><th colspan="3"><center>R</center></th></tr>
 
@@ -952,12 +974,12 @@ ORDER BY start_year, primary_title;"""
 </td></tr> 
 </table>
 
-<details><summary><strong><center>Click here to view the visualizations on which I based the R recommendations.</center></strong></summary>
+<details align="center"><summary><strong>Click here to view the visualizations on which I based the R recommendations.</strong></summary>
 <p>
 
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-<details><summary><strong><center>Click here to view the visualizations on which I based my recommendations for the R Important Genres.</center></strong></summary>
+<details align="center"><summary><strong>Click here to view the visualizations on which I based my recommendations for the R Important Genres.</strong></summary>
 <p>
 
 <table width="99%" border=0 cellspacing="0" cellpadding="0">
@@ -992,7 +1014,7 @@ ORDER BY start_year, primary_title;"""
 
 <br>
 
-<details><summary><strong><center>Click here to view the visualizations on which I based my recommendations for the R Important Creative Types.</center></strong></summary>
+<details align="center"><summary><strong>Click here to view the visualizations on which I based my recommendations for the R Important Creative Types.</strong></summary>
 <p>
 
 <table width="99%" border=0 cellspacing="0" cellpadding="0">
@@ -1027,7 +1049,7 @@ ORDER BY start_year, primary_title;"""
 
 <br>
 
-<details><summary><strong><center>Click here to view the visualizations on which I based my recommendations for the R Important Genre & Creative Type Combinations.</center></strong></summary>
+<details align="center"><summary><strong>Click here to view the visualizations on which I based my recommendations for the R Important Genre & Creative Type Combinations.</strong></summary>
 <p>
 
 <table width="99%" border=0 cellspacing="0" cellpadding="0">
@@ -1067,7 +1089,7 @@ ORDER BY start_year, primary_title;"""
 <img src="special_texts/sub_sect_g_reco.svg"/>
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-<table width="99%" border=0 cellspacing="0" cellpadding="0">
+<table align="center">
     
 <tr><th colspan="3"><center>G</center></th></tr>
 
@@ -1092,8 +1114,7 @@ ORDER BY start_year, primary_title;"""
 </td></tr> 
 </table>
 
-<strong><center>There was only one important subcategory for each subcategory type,</center></strong>
-<strong><center>and therefore no need for exploratory visualizations.</center></strong>
+<p align="center"><strong>There was only one important subcategory for each subcategory type, <br> and therefore no need for exploratory visualizations.</strong></p>
 
 <a id='sub_sect_int_viz'></a>
 <img src="special_texts/sub_sect_int_viz.svg"/>
@@ -1115,45 +1136,45 @@ ORDER BY start_year, primary_title;"""
 
 **NOTE :**&ensp;This version of the explorer only allows you to access the recommended crew visualizations of the subcategories I specifically recommended for each Rating.
 
-# <strong><center>PG-13</center></strong>
+<h2 align="center"><strong>PG-13</strong></h2>
 <br>
 <!--- PG-13 --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Recommended Subcategories for PG-13 MPA Rating.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Recommended Subcategories for the PG-13 Rating.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- PG-13 - Important Genres --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- PG-13 - Important Genres - Total Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Gross.</strong></summary>
 <p>
     
 <!--- PG-13 - Important Genres - Total Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Gross/Directors/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Gross/Directors/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Gross/Directors/Thriller - Suspense.jpeg"/>
 </p>
@@ -1164,22 +1185,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Genres - Total Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Gross/Writers/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Gross/Writers/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Gross/Writers/Thriller - Suspense.jpeg"/>
 </p>
@@ -1190,22 +1211,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Genres - Total Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Gross/Actors/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Gross/Actors/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Gross/Actors/Thriller - Suspense.jpeg"/>
 </p>
@@ -1216,22 +1237,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Genres - Total Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Gross/Actresses/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Gross/Actresses/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Gross/Actresses/Thriller - Suspense.jpeg"/>
 </p>
@@ -1245,31 +1266,31 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>   <br>
     
 <!--- PG-13 - Important Genres - Total Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Profits.</strong></summary>
 <p>
     
 <!--- PG-13 - Important Genres - Total Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Profits/Directors/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Profits/Directors/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Profits/Directors/Thriller - Suspense.jpeg"/>
 </p>
@@ -1280,22 +1301,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Genres - Total Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Profits/Writers/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Profits/Writers/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Profits/Writers/Thriller - Suspense.jpeg"/>
 </p>
@@ -1306,22 +1327,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Genres - Total Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Profits/Actors/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Profits/Actors/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Profits/Actors/Thriller - Suspense.jpeg"/>
 </p>
@@ -1332,22 +1353,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Genres - Total Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Profits/Actresses/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Profits/Actresses/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Total Worldwide Profits/Actresses/Thriller - Suspense.jpeg"/>
 </p>
@@ -1361,31 +1382,31 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>   <br>
     
 <!--- PG-13 - Important Genres - Average Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Gross.</strong></summary>
 <p>
     
 <!--- PG-13 - Important Genres - Average Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Gross/Directors/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Gross/Directors/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Gross/Directors/Thriller - Suspense.jpeg"/>
 </p>
@@ -1396,22 +1417,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Genres - Average Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Gross/Writers/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Gross/Writers/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Gross/Writers/Thriller - Suspense.jpeg"/>
 </p>
@@ -1422,22 +1443,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Genres - Average Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Gross/Actors/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Gross/Actors/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Gross/Actors/Thriller - Suspense.jpeg"/>
 </p>
@@ -1448,22 +1469,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Genres - Average Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Gross/Actresses/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Gross/Actresses/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Gross/Actresses/Thriller - Suspense.jpeg"/>
 </p>
@@ -1477,31 +1498,31 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>   <br>
     
 <!--- PG-13 - Important Genres - Average Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Profits.</strong></summary>
 <p>
     
 <!--- PG-13 - Important Genres - Average Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Profits/Directors/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Profits/Directors/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Profits/Directors/Thriller - Suspense.jpeg"/>
 </p>
@@ -1512,22 +1533,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Genres - Average Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Profits/Writers/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Profits/Writers/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Profits/Writers/Thriller - Suspense.jpeg"/>
 </p>
@@ -1538,22 +1559,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Genres - Average Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Profits/Actors/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Profits/Actors/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Profits/Actors/Thriller - Suspense.jpeg"/>
 </p>
@@ -1564,22 +1585,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Genres - Average Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Profits/Actresses/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Profits/Actresses/Adventure.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Thriller / Suspense</center></strong></summary>
+<details align="center"><summary><strong>Thriller / Suspense</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Genres/Average Worldwide Profits/Actresses/Thriller - Suspense.jpeg"/>
 </p>
@@ -1600,28 +1621,28 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Creative Types --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- PG-13 - Important Creative Types - Total Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Gross.</strong></summary>
 <p>
     
 <!--- PG-13 - Important Creative Types - Total Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Gross/Directors/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Gross/Directors/Science Fiction.jpeg"/>
 </p>
@@ -1632,16 +1653,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Creative Types - Total Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Gross/Writers/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Gross/Writers/Science Fiction.jpeg"/>
 </p>
@@ -1652,16 +1673,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Creative Types - Total Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Gross/Actors/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Gross/Actors/Science Fiction.jpeg"/>
 </p>
@@ -1672,16 +1693,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Creative Types - Total Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Gross/Actresses/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Gross/Actresses/Science Fiction.jpeg"/>
 </p>
@@ -1695,25 +1716,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>   <br>
     
 <!--- PG-13 - Important Creative Types - Total Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Profits.</strong></summary>
 <p>
     
 <!--- PG-13 - Important Creative Types - Total Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Profits/Directors/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Profits/Directors/Science Fiction.jpeg"/>
 </p>
@@ -1724,16 +1745,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Creative Types - Total Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Profits/Writers/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Profits/Writers/Science Fiction.jpeg"/>
 </p>
@@ -1744,16 +1765,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Creative Types - Total Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Profits/Actors/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Profits/Actors/Science Fiction.jpeg"/>
 </p>
@@ -1764,16 +1785,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Creative Types - Total Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Profits/Actresses/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Total Worldwide Profits/Actresses/Science Fiction.jpeg"/>
 </p>
@@ -1787,31 +1808,31 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>   <br>
     
 <!--- PG-13 - Important Creative Types - Average Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Gross.</strong></summary>
 <p>
     
 <!--- PG-13 - Important Creative Types - Average Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Gross/Directors/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Gross/Directors/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Gross/Directors/Fantasy.jpeg"/>
 </p>
@@ -1822,22 +1843,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Creative Types - Average Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Gross/Writers/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Gross/Writers/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Gross/Writers/Fantasy.jpeg"/>
 </p>
@@ -1848,22 +1869,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Creative Types - Average Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Gross/Actors/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Gross/Actors/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Gross/Actors/Fantasy.jpeg"/>
 </p>
@@ -1874,22 +1895,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Creative Types - Average Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Gross/Actresses/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Gross/Actresses/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Gross/Actresses/Fantasy.jpeg"/>
 </p>
@@ -1903,31 +1924,31 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>   <br>
     
 <!--- PG-13 - Important Creative Types - Average Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Profits.</strong></summary>
 <p>
     
 <!--- PG-13 - Important Creative Types - Average Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Profits/Directors/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Profits/Directors/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Profits/Directors/Fantasy.jpeg"/>
 </p>
@@ -1938,22 +1959,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Creative Types - Average Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Profits/Writers/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Profits/Writers/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Profits/Writers/Fantasy.jpeg"/>
 </p>
@@ -1964,22 +1985,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Creative Types - Average Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Profits/Actors/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Profits/Actors/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Profits/Actors/Fantasy.jpeg"/>
 </p>
@@ -1990,22 +2011,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Creative Types - Average Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Profits/Actresses/Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Profits/Actresses/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Creative Types/Average Worldwide Profits/Actresses/Fantasy.jpeg"/>
 </p>
@@ -2026,34 +2047,34 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Combinations --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- PG-13 - Important Combinations - Total Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Gross.</strong></summary>
 <p>
     
 <!--- PG-13 - Important Combinations - Total Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Gross/Directors/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Gross/Directors/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Gross/Directors/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -2064,22 +2085,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Combinations - Total Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Gross/Writers/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Gross/Writers/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Gross/Writers/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -2090,22 +2111,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Combinations - Total Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Gross/Actors/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Gross/Actors/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Gross/Actors/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -2116,22 +2137,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Combinations - Total Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Gross/Actresses/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Gross/Actresses/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Gross/Actresses/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -2145,31 +2166,31 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>   <br>
     
 <!--- PG-13 - Important Combinations - Total Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Profits.</strong></summary>
 <p>
     
 <!--- PG-13 - Important Combinations - Total Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Profits/Directors/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Profits/Directors/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Profits/Directors/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -2180,22 +2201,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Combinations - Total Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Profits/Writers/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Profits/Writers/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Profits/Writers/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -2206,22 +2227,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Combinations - Total Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Profits/Actors/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Profits/Actors/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Profits/Actors/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -2232,22 +2253,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Combinations - Total Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Profits/Actresses/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Profits/Actresses/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Total Worldwide Profits/Actresses/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -2261,31 +2282,31 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>   <br>
     
 <!--- PG-13 - Important Combinations - Average Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Gross.</strong></summary>
 <p>
     
 <!--- PG-13 - Important Combinations - Average Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Gross/Directors/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Gross/Directors/Adventure, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Gross/Directors/Adventure, Fantasy.jpeg"/>
 </p>
@@ -2296,22 +2317,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Combinations - Average Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Gross/Writers/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Gross/Writers/Adventure, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Gross/Writers/Adventure, Fantasy.jpeg"/>
 </p>
@@ -2322,22 +2343,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Combinations - Average Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Gross/Actors/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Gross/Actors/Adventure, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Gross/Actors/Adventure, Fantasy.jpeg"/>
 </p>
@@ -2348,22 +2369,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Combinations - Average Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Gross/Actresses/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Gross/Actresses/Adventure, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Gross/Actresses/Adventure, Fantasy.jpeg"/>
 </p>
@@ -2377,31 +2398,31 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>   <br>
     
 <!--- PG-13 - Important Combinations - Average Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Profits.</strong></summary>
 <p>
     
 <!--- PG-13 - Important Combinations - Average Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Profits/Directors/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Profits/Directors/Adventure, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Profits/Directors/Adventure, Fantasy.jpeg"/>
 </p>
@@ -2412,22 +2433,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Combinations - Average Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Profits/Writers/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Profits/Writers/Adventure, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Profits/Writers/Adventure, Fantasy.jpeg"/>
 </p>
@@ -2438,22 +2459,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Combinations - Average Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Profits/Actors/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Profits/Actors/Adventure, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Profits/Actors/Adventure, Fantasy.jpeg"/>
 </p>
@@ -2464,22 +2485,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG-13 - Important Combinations - Average Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Super Hero</center></strong></summary>
+<details align="center"><summary><strong>Action & Super Hero</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Profits/Actresses/Action, Super Hero.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Science Fiction</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Profits/Actresses/Adventure, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG-13/Important Combinations/Average Worldwide Profits/Actresses/Adventure, Fantasy.jpeg"/>
 </p>
@@ -2498,39 +2519,39 @@ ORDER BY start_year, primary_title;"""
 </details>
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-# <strong><center>PG</center></strong>
+<h2 align="center"><strong>PG</strong></h2>
 <br>
 <!--- PG --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Recommended Subcategories for the PG MPA Rating.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Recommended Subcategories for the PG Rating.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- PG - Important Genres --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- PG - Important Genres - Total Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Gross.</strong></summary>
 <p>
     
 <!--- PG - Important Genres - Total Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Gross/Directors/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Gross/Directors/Adventure.jpeg"/>
 </p>
@@ -2541,16 +2562,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Genres - Total Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Gross/Writers/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Gross/Writers/Adventure.jpeg"/>
 </p>
@@ -2561,16 +2582,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Genres - Total Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Gross/Actors/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Gross/Actors/Adventure.jpeg"/>
 </p>
@@ -2581,16 +2602,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Genres - Total Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Gross/Actresses/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Gross/Actresses/Adventure.jpeg"/>
 </p>
@@ -2604,25 +2625,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- PG - Important Genres - Total Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Profits.</strong></summary>
 <p>
     
 <!--- PG - Important Genres - Total Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Profits/Directors/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Profits/Directors/Adventure.jpeg"/>
 </p>
@@ -2633,16 +2654,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Genres - Total Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Profits/Writers/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Profits/Writers/Adventure.jpeg"/>
 </p>
@@ -2653,16 +2674,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Genres - Total Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Profits/Actors/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Profits/Actors/Adventure.jpeg"/>
 </p>
@@ -2673,16 +2694,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Genres - Total Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Profits/Actresses/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Total Worldwide Profits/Actresses/Adventure.jpeg"/>
 </p>
@@ -2696,25 +2717,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- PG - Important Genres - Average Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Gross.</strong></summary>
 <p>
     
 <!--- PG - Important Genres - Average Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Gross/Directors/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Gross/Directors/Adventure.jpeg"/>
 </p>
@@ -2726,16 +2747,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Genres - Average Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Gross/Writers/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Gross/Writers/Adventure.jpeg"/>
 </p>
@@ -2746,16 +2767,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Genres - Average Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Gross/Actors/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Gross/Actors/Adventure.jpeg"/>
 </p>
@@ -2766,16 +2787,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Genres - Average Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Gross/Actresses/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Gross/Actresses/Adventure.jpeg"/>
 </p>
@@ -2789,25 +2810,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- PG - Important Genres - Average Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Profits.</strong></summary>
 <p>
     
 <!--- PG - Important Genres - Average Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Profits/Directors/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Profits/Directors/Adventure.jpeg"/>
 </p>
@@ -2818,16 +2839,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Genres - Average Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Profits/Writers/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Profits/Writers/Adventure.jpeg"/>
 </p>
@@ -2838,16 +2859,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Genres - Average Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Profits/Actors/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Profits/Actors/Adventure.jpeg"/>
 </p>
@@ -2858,16 +2879,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Genres - Average Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Musical</center></strong></summary>
+<details align="center"><summary><strong>Musical</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Profits/Actresses/Musical.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/PG/Important Genres/Average Worldwide Profits/Actresses/Adventure.jpeg"/>
 </p>
@@ -2888,28 +2909,28 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Creative Types --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- PG - Important Creative Types - Total Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Gross.</strong></summary>
 <p>
     
 <!--- PG - Important Creative Types - Total Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Gross/Directors/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Gross/Directors/Fantasy.jpeg"/>
 </p>
@@ -2920,16 +2941,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Creative Types - Total Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Gross/Writers/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Gross/Writers/Fantasy.jpeg"/>
 </p>
@@ -2940,16 +2961,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Creative Types - Total Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Gross/Actors/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Gross/Actors/Fantasy.jpeg"/>
 </p>
@@ -2960,16 +2981,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Creative Types - Total Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Gross/Actresses/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Gross/Actresses/Fantasy.jpeg"/>
 </p>
@@ -2983,25 +3004,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- PG - Important Creative Types - Total Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Profits.</strong></summary>
 <p>
     
 <!--- PG - Important Creative Types - Total Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Profits/Directors/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Profits/Directors/Fantasy.jpeg"/>
 </p>
@@ -3012,16 +3033,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Creative Types - Total Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Profits/Writers/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Profits/Writers/Fantasy.jpeg"/>
 </p>
@@ -3032,16 +3053,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Creative Types - Total Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Profits/Actors/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Profits/Actors/Fantasy.jpeg"/>
 </p>
@@ -3052,16 +3073,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Creative Types - Total Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Profits/Actresses/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Total Worldwide Profits/Actresses/Fantasy.jpeg"/>
 </p>
@@ -3075,25 +3096,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- PG - Important Creative Types - Average Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Gross.</strong></summary>
 <p>
     
 <!--- PG - Important Creative Types - Average Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Gross/Directors/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Gross/Directors/Fantasy.jpeg"/>
 </p>
@@ -3104,16 +3125,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Creative Types - Average Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Gross/Writers/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Gross/Writers/Fantasy.jpeg"/>
 </p>
@@ -3124,16 +3145,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Creative Types - Average Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Gross/Actors/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Gross/Actors/Fantasy.jpeg"/>
 </p>
@@ -3144,16 +3165,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Creative Types - Average Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Gross/Actresses/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Gross/Actresses/Fantasy.jpeg"/>
 </p>
@@ -3167,25 +3188,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- PG - Important Creative Types - Average Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Profits.</strong></summary>
 <p>
     
 <!--- PG - Important Creative Types - Average Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Profits/Directors/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Profits/Directors/Fantasy.jpeg"/>
 </p>
@@ -3196,16 +3217,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Creative Types - Average Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Profits/Writers/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Profits/Writers/Fantasy.jpeg"/>
 </p>
@@ -3216,16 +3237,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Creative Types - Average Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Profits/Actors/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Profits/Actors/Fantasy.jpeg"/>
 </p>
@@ -3236,16 +3257,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Creative Types - Average Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Profits/Actresses/Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Creative Types/Average Worldwide Profits/Actresses/Fantasy.jpeg"/>
 </p>
@@ -3267,28 +3288,28 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Combinations --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- PG - Important Combinations - Total Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Gross.</strong></summary>
 <p>
     
 <!--- PG - Important Combinations - Total Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Gross/Directors/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Gross/Directors/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3299,16 +3320,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Combinations - Total Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Gross/Writers/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Gross/Writers/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3319,16 +3340,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Combinations - Total Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Gross/Actors/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Gross/Actors/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3339,16 +3360,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Combinations - Total Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Gross/Actresses/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Gross/Actresses/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3362,25 +3383,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- PG - Important Combinations - Total Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Profits.</strong></summary>
 <p>
     
 <!--- PG - Important Combinations - Total Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Profits/Directors/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Profits/Directors/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3391,16 +3412,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Combinations - Total Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Profits/Writers/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Profits/Writers/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3411,16 +3432,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Combinations - Total Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Profits/Actors/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Profits/Actors/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3431,16 +3452,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Combinations - Total Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Profits/Actresses/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Total Worldwide Profits/Actresses/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3454,25 +3475,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- PG - Important Combinations - Average Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Gross.</strong></summary>
 <p>
     
 <!--- PG - Important Combinations - Average Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Gross/Directors/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Gross/Directors/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3483,16 +3504,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Combinations - Average Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Gross/Writers/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Gross/Writers/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3503,16 +3524,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Combinations - Average Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Gross/Actors/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Gross/Actors/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3523,16 +3544,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Combinations - Average Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Gross/Actresses/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Gross/Actresses/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3546,25 +3567,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- PG - Important Combinations - Average Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Profits.</strong></summary>
 <p>
     
 <!--- PG - Important Combinations - Average Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Profits/Directors/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Profits/Directors/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3575,16 +3596,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Combinations - Average Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Profits/Writers/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Profits/Writers/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3595,16 +3616,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Combinations - Average Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Profits/Actors/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Profits/Actors/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3615,16 +3636,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- PG - Important Combinations - Average Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Profits/Actresses/Adventure, Kids Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Adventure & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Fantasy</strong></summary>
 <p>
 <img src="visuals/PG/Important Combinations/Average Worldwide Profits/Actresses/Adventure, Fantasy.jpeg"/>
 </p>
@@ -3643,39 +3664,39 @@ ORDER BY start_year, primary_title;"""
 </details>
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-# <strong><center>R</center></strong>
+<h2 align="center"><strong>R</strong></h2>
 <br>
 <!--- R --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Recommended Subcategories for the R MPA Rating.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Recommended Subcategories for the R Rating.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- R - Important Genres --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- R - Important Genres - Total Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Gross.</strong></summary>
 <p>
     
 <!--- R - Important Genres - Total Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Gross/Directors/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy</center></strong></summary>
+<details align="center"><summary><strong>Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Gross/Directors/Com.jpeg"/>
 </p>
@@ -3686,16 +3707,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Genres - Total Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Gross/Writers/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy</center></strong></summary>
+<details align="center"><summary><strong>Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Gross/Writers/Comedy.jpeg"/>
 </p>
@@ -3706,16 +3727,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Genres - Total Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Gross/Actors/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy</center></strong></summary>
+<details align="center"><summary><strong>Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Gross/Actors/Comedy.jpeg"/>
 </p>
@@ -3726,16 +3747,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Genres - Total Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Gross/Actresses/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy</center></strong></summary>
+<details align="center"><summary><strong>Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Gross/Actresses/Comedy.jpeg"/>
 </p>
@@ -3747,25 +3768,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
     
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- R - Important Genres - Total Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Profits.</strong></summary>
 <p>
     
 <!--- R - Important Genres - Total Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Profits/Directors/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy</center></strong></summary>
+<details align="center"><summary><strong>Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Profits/Directors/Comedy.jpeg"/>
 </p>
@@ -3776,16 +3797,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Genres - Total Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Profits/Writers/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy</center></strong></summary>
+<details align="center"><summary><strong>Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Profits/Writers/Comedy.jpeg"/>
 </p>
@@ -3796,16 +3817,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Genres - Total Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Profits/Actors/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy</center></strong></summary>
+<details align="center"><summary><strong>Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Profits/Actors/Comedy.jpeg"/>
 </p>
@@ -3816,16 +3837,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Genres - Total Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Profits/Actresses/Action.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy</center></strong></summary>
+<details align="center"><summary><strong>Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Total Worldwide Profits/Actresses/Comedy.jpeg"/>
 </p>
@@ -3837,31 +3858,31 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
     
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- R - Important Genres - Average Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Gross.</strong></summary>
 <p>
     
 <!--- R - Important Genres - Average Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Horror</center></strong></summary>
+<details align="center"><summary><strong>Horror</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Gross/Directors/Horror.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Black Comedy</center></strong></summary>
+<details align="center"><summary><strong>Black Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Gross/Directors/Black Comedy.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Gross/Directors/Action.jpeg"/>
 </p>
@@ -3872,22 +3893,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Genres - Average Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Horror</center></strong></summary>
+<details align="center"><summary><strong>Horror</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Gross/Writers/Horror.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Black Comedy</center></strong></summary>
+<details align="center"><summary><strong>Black Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Gross/Writers/Black Comedy.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Gross/Writers/Action.jpeg"/>
 </p>
@@ -3898,22 +3919,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Genres - Average Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Horror</center></strong></summary>
+<details align="center"><summary><strong>Horror</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Gross/Actors/Horror.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Black Comedy</center></strong></summary>
+<details align="center"><summary><strong>Black Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Gross/Actors/Black Comedy.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Gross/Actors/Action.jpeg"/>
 </p>
@@ -3924,22 +3945,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Genres - Average Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Horror</center></strong></summary>
+<details align="center"><summary><strong>Horror</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Gross/Actresses/Horror.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Black Comedy</center></strong></summary>
+<details align="center"><summary><strong>Black Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Gross/Actresses/Black Comedy.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Gross/Actresses/Action.jpeg"/>
 </p>
@@ -3951,31 +3972,31 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
     
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- R - Important Genres - Average Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Profits.</strong></summary>
 <p>
     
 <!--- R - Important Genres - Average Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Horror</center></strong></summary>
+<details align="center"><summary><strong>Horror</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Profits/Directors/Horror.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Black Comedy</center></strong></summary>
+<details align="center"><summary><strong>Black Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Profits/Directors/Black Comedy.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Profits/Directors/Action.jpeg"/>
 </p>
@@ -3986,22 +4007,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Genres - Average Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Horror</center></strong></summary>
+<details align="center"><summary><strong>Horror</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Profits/Writers/Horror.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Black Comedy</center></strong></summary>
+<details align="center"><summary><strong>Black Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Profits/Writers/Black Comedy.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Profits/Writers/Action.jpeg"/>
 </p>
@@ -4012,22 +4033,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Genres - Average Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Horror</center></strong></summary>
+<details align="center"><summary><strong>Horror</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Profits/Actors/Horror.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Black Comedy</center></strong></summary>
+<details align="center"><summary><strong>Black Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Profits/Actors/Black Comedy.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Profits/Actors/Action.jpeg"/>
 </p>
@@ -4038,22 +4059,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Genres - Average Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Horror</center></strong></summary>
+<details align="center"><summary><strong>Horror</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Profits/Actresses/Horror.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Black Comedy</center></strong></summary>
+<details align="center"><summary><strong>Black Comedy</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Profits/Actresses/Black Comedy.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action</center></strong></summary>
+<details align="center"><summary><strong>Action</strong></summary>
 <p>
 <img src="visuals/R/Important Genres/Average Worldwide Profits/Actresses/Action.jpeg"/>
 </p>
@@ -4074,28 +4095,28 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Creative Types --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- R - Important Creative Types - Total Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Gross.</strong></summary>
 <p>
     
 <!--- R - Important Creative Types - Total Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Gross/Directors/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Gross/Directors/Contemporary Fiction.jpeg"/>
 </p>
@@ -4106,16 +4127,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Creative Types - Total Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Gross/Writers/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Gross/Writers/Contemporary Fiction.jpeg"/>
 </p>
@@ -4126,16 +4147,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Creative Types - Total Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Gross/Actors/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Gross/Actors/Contemporary Fiction.jpeg"/>
 </p>
@@ -4146,16 +4167,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Creative Types - Total Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Gross/Actresses/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Gross/Actresses/Contemporary Fiction.jpeg"/>
 </p>
@@ -4167,25 +4188,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- R - Important Creative Types - Total Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Profits.</strong></summary>
 <p>
     
 <!--- R - Important Creative Types - Total Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Profits/Directors/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Profits/Directors/Contemporary Fiction.jpeg"/>
 </p>
@@ -4196,16 +4217,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Creative Types - Total Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Profits/Writers/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Profits/Writers/Contemporary Fiction.jpeg"/>
 </p>
@@ -4216,16 +4237,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Creative Types - Total Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Profits/Actors/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Profits/Actors/Contemporary Fiction.jpeg"/>
 </p>
@@ -4236,16 +4257,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Creative Types - Total Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Profits/Actresses/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Total Worldwide Profits/Actresses/Contemporary Fiction.jpeg"/>
 </p>
@@ -4257,25 +4278,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- R - Important Creative Types - Average Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Gross.</strong></summary>
 <p>
     
 <!--- R - Important Creative Types - Average Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
     
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Gross/Directors/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Gross/Directors/Contemporary Fiction.jpeg"/>
 </p>
@@ -4286,16 +4307,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Creative Types - Average Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Gross/Writers/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Gross/Writers/Contemporary Fiction.jpeg"/>
 </p>
@@ -4306,16 +4327,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Creative Types - Average Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Gross/Actors/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Gross/Actors/Contemporary Fiction.jpeg"/>
 </p>
@@ -4326,16 +4347,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Creative Types - Average Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Gross/Actresses/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Gross/Actresses/Contemporary Fiction.jpeg"/>
 </p>
@@ -4347,25 +4368,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- R - Important Creative Types - Average Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Profits.</strong></summary>
 <p>
     
 <!--- R - Important Creative Types - Average Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
     
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Profits/Directors/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Profits/Directors/Contemporary Fiction.jpeg"/>
 </p>
@@ -4376,16 +4397,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Creative Types - Average Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Profits/Writers/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Profits/Writers/Contemporary Fiction.jpeg"/>
 </p>
@@ -4396,16 +4417,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Creative Types - Average Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Profits/Actors/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Profits/Actors/Contemporary Fiction.jpeg"/>
 </p>
@@ -4416,16 +4437,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Creative Types - Average Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Profits/Actresses/Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Creative Types/Average Worldwide Profits/Actresses/Contemporary Fiction.jpeg"/>
 </p>
@@ -4446,28 +4467,28 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Combinations --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- R - Important Combinations - Total Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Gross.</strong></summary>
 <p>
     
 <!--- R - Important Combinations - Total Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Gross/Directors/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Gross/Directors/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -4478,16 +4499,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Combinations - Total Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Gross/Writers/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Gross/Writers/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -4498,16 +4519,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Combinations - Total Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Gross/Actors/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Gross/Actors/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -4518,16 +4539,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Combinations - Total Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Gross/Actresses/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Gross/Actresses/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -4539,25 +4560,25 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- R - Important Combinations - Total Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Profits.</strong></summary>
 <p>
     
 <!--- R - Important Combinations - Total Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Profits/Directors/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Profits/Directors/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -4568,16 +4589,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Combinations - Total Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Profits/Writers/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Profits/Writers/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -4588,16 +4609,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Combinations - Total Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Profits/Actors/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Profits/Actors/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -4608,16 +4629,16 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Combinations - Total Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Profits/Actresses/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Action & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Total Worldwide Profits/Actresses/Action, Contemporary Fiction.jpeg"/>
 </p>
@@ -4629,31 +4650,31 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- R - Important Combinations - Average Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Gross.</strong></summary>
 <p>
     
 <!--- R - Important Combinations - Average Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Gross/Directors/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Gross/Directors/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Horror & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Horror & Fantasy</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Gross/Directors/Horror, Fantasy.jpeg"/>
 </p>
@@ -4664,22 +4685,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Combinations - Average Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Gross/Writers/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Gross/Writers/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Horror & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Horror & Fantasy</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Gross/Writers/Horror, Fantasy.jpeg"/>
 </p>
@@ -4690,22 +4711,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Combinations - Average Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Gross/Actors/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Gross/Actors/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Horror & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Horror & Fantasy</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Gross/Actors/Horror, Fantasy.jpeg"/>
 </p>
@@ -4716,22 +4737,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Combinations - Average Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Gross/Actresses/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Gross/Actresses/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Horror & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Horror & Fantasy</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Gross/Actresses/Horror, Fantasy.jpeg"/>
 </p>
@@ -4743,31 +4764,31 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- R - Important Combinations - Average Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Profits.</strong></summary>
 <p>
     
 <!--- R - Important Combinations - Average Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Profits/Directors/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Profits/Directors/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Horror & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Horror & Fantasy</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Profits/Directors/Horror, Fantasy.jpeg"/>
 </p>
@@ -4778,22 +4799,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Combinations - Average Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Profits/Writers/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Profits/Writers/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Horror & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Horror & Fantasy</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Profits/Writers/Horror, Fantasy.jpeg"/>
 </p>
@@ -4804,22 +4825,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Combinations - Average Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Profits/Actors/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Profits/Actors/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Horror & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Horror & Fantasy</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Profits/Actors/Horror, Fantasy.jpeg"/>
 </p>
@@ -4830,22 +4851,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- R - Important Combinations - Average Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Action & Science Fiction</center></strong></summary>
+<details align="center"><summary><strong>Action & Science Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Profits/Actresses/Action, Science Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Comedy & Contemporary Fiction</center></strong></summary>
+<details align="center"><summary><strong>Comedy & Contemporary Fiction</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Profits/Actresses/Comedy, Contemporary Fiction.jpeg"/>
 </p>
 </details>
 <br>
-<details><summary><strong><center>Horror & Fantasy</center></strong></summary>
+<details align="center"><summary><strong>Horror & Fantasy</strong></summary>
 <p>
 <img src="visuals/R/Important Combinations/Average Worldwide Profits/Actresses/Horror, Fantasy.jpeg"/>
 </p>
@@ -4864,33 +4885,34 @@ ORDER BY start_year, primary_title;"""
 </details>
 <hr style="border:1.2px solid #2222FF"> </hr>
 
-# <strong><center>G</center></strong>
+<h2 align="center"><strong>G</strong></h2>
 <br>
 <!--- G --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Recommended Subcategories for the G MPA Rating.</center></strong></summary>
+
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Recommended Subcategories for the G Rating.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- G - Important Genres --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- G - Important Genres - Total Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Gross.</strong></summary>
 <p>
     
 <!--- G - Important Genres - Total Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Total Worldwide Gross/Directors/Adventure.jpeg"/>
 </p>
@@ -4901,10 +4923,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Genres - Total Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Total Worldwide Gross/Writers/Adventure.jpeg"/>
 </p>
@@ -4915,10 +4937,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Genres - Total Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Total Worldwide Gross/Actors/Adventure.jpeg"/>
 </p>
@@ -4929,10 +4951,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Genres - Total Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Total Worldwide Gross/Actresses/Adventure.jpeg"/>
 </p>
@@ -4944,19 +4966,19 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
     
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- G - Important Genres - Total Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Total Worldwide Profits.</strong></summary>
 <p>
     
 <!--- G - Important Genres - Total Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Total Worldwide Profits/Directors/Adventure.jpeg"/>
 </p>
@@ -4967,10 +4989,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Genres - Total Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Total Worldwide Profits/Writers/Adventure.jpeg"/>
 </p>
@@ -4981,10 +5003,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Genres - Total Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Total Worldwide Profits/Actors/Adventure.jpeg"/>
 </p>
@@ -4995,10 +5017,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Genres - Total Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Total Worldwide Profits/Actresses/Adventure.jpeg"/>
 </p>
@@ -5010,19 +5032,19 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- G - Important Genres - Average Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Gross.</strong></summary>
 <p>
     
 <!--- G - Important Genres - Average Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Average Worldwide Gross/Directors/Adventure.jpeg"/>
 </p>
@@ -5034,10 +5056,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Genres - Average Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Average Worldwide Gross/Writers/Adventure.jpeg"/>
 </p>
@@ -5048,10 +5070,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Genres - Average Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Average Worldwide Gross/Actors/Adventure.jpeg"/>
 </p>
@@ -5062,10 +5084,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Genres - Average Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Average Worldwide Gross/Actresses/Adventure.jpeg"/>
 </p>
@@ -5077,19 +5099,19 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
     
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- G - Important Genres - Average Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genres based on Average Worldwide Profits.</strong></summary>
 <p>
     
 <!--- G - Important Genres - Average Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Average Worldwide Profits/Directors/Adventure.jpeg"/>
 </p>
@@ -5100,10 +5122,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Genres - Average Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Average Worldwide Profits/Writers/Adventure.jpeg"/>
 </p>
@@ -5114,10 +5136,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Genres - Average Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Average Worldwide Profits/Actors/Adventure.jpeg"/>
 </p>
@@ -5128,10 +5150,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Genres - Average Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure</center></strong></summary>
+<details align="center"><summary><strong>Adventure</strong></summary>
 <p>
 <img src="visuals/G/Important Genres/Average Worldwide Profits/Actresses/Adventure.jpeg"/>
 </p>
@@ -5152,22 +5174,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Creative Types --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- G - Important Creative Types - Total Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Gross.</strong></summary>
 <p>
     
 <!--- G - Important Creative Types - Total Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Total Worldwide Gross/Directors/Kids Fiction.jpeg"/>
 </p>
@@ -5178,10 +5200,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Creative Types - Total Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Total Worldwide Gross/Writers/Kids Fiction.jpeg"/>
 </p>
@@ -5192,10 +5214,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Creative Types - Total Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Total Worldwide Gross/Actors/Kids Fiction.jpeg"/>
 </p>
@@ -5206,10 +5228,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Creative Types - Total Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Total Worldwide Gross/Actresses/Kids Fiction.jpeg"/>
 </p>
@@ -5221,19 +5243,19 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- G - Important Creative Types - Total Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Total Worldwide Profits.</strong></summary>
 <p>
     
 <!--- G - Important Creative Types - Total Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Total Worldwide Profits/Directors/Kids Fiction.jpeg"/>
 </p>
@@ -5244,10 +5266,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Creative Types - Total Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Total Worldwide Profits/Writers/Kids Fiction.jpeg"/>
 </p>
@@ -5258,10 +5280,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Creative Types - Total Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Total Worldwide Profits/Actors/Kids Fiction.jpeg"/>
 </p>
@@ -5272,10 +5294,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Creative Types - Total Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Total Worldwide Profits/Actresses/Kids Fiction.jpeg"/>
 </p>
@@ -5287,19 +5309,19 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- G - Important Creative Types - Average Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Gross.</strong></summary>
 <p>
     
 <!--- G - Important Creative Types - Average Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Average Worldwide Gross/Directors/Kids Fiction.jpeg"/>
 </p>
@@ -5310,10 +5332,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Creative Types - Average Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Average Worldwide Gross/Writers/Kids Fiction.jpeg"/>
 </p>
@@ -5324,10 +5346,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Creative Types - Average Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Average Worldwide Gross/Actors/Kids Fiction.jpeg"/>
 </p>
@@ -5338,10 +5360,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Creative Types - Average Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Average Worldwide Gross/Actresses/Kids Fiction.jpeg"/>
 </p>
@@ -5353,19 +5375,19 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- G - Important Creative Types - Average Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Creative Types based on Average Worldwide Profits.</strong></summary>
 <p>
     
 <!--- G - Important Creative Types - Average Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Average Worldwide Profits/Directors/Kids Fiction.jpeg"/>
 </p>
@@ -5376,10 +5398,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Creative Types - Average Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Average Worldwide Profits/Writers/Kids Fiction.jpeg"/>
 </p>
@@ -5390,10 +5412,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Creative Types - Average Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Average Worldwide Profits/Actors/Kids Fiction.jpeg"/>
 </p>
@@ -5404,10 +5426,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Creative Types - Average Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Creative Types/Average Worldwide Profits/Actresses/Kids Fiction.jpeg"/>
 </p>
@@ -5428,22 +5450,22 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Combinations --->
 
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations.</strong></summary>
 <p>
     
 <hr style="border:1.2px solid #2222FF"> </hr>
     
 <!--- G - Important Combinations - Total Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Gross.</strong></summary>
 <p>
     
 <!--- G - Important Combinations - Total Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Total Worldwide Gross/Directors/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5454,10 +5476,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Combinations - Total Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Total Worldwide Gross/Writers/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5468,10 +5490,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Combinations - Total Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Total Worldwide Gross/Actors/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5482,10 +5504,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Combinations - Total Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Total Worldwide Gross/Actresses/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5497,19 +5519,19 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- G - Important Combinations - Total Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Total Worldwide Profits.</strong></summary>
 <p>
     
 <!--- G - Important Combinations - Total Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Total Worldwide Profits/Directors/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5520,10 +5542,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Combinations - Total Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Total Worldwide Profits/Writers/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5534,10 +5556,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Combinations - Total Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Total Worldwide Profits/Actors/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5548,10 +5570,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Combinations - Total Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Total Worldwide Profits/Actresses/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5563,19 +5585,19 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- G - Important Combinations - Average Worldwide Gross --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Gross.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Gross.</strong></summary>
 <p>
     
 <!--- G - Important Combinations - Average Worldwide Gross - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Average Worldwide Gross/Directors/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5586,10 +5608,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Combinations - Average Worldwide Gross - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Average Worldwide Gross/Writers/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5600,10 +5622,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Combinations - Average Worldwide Gross - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Average Worldwide Gross/Actors/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5614,10 +5636,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Combinations - Average Worldwide Gross - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Average Worldwide Gross/Actresses/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5629,19 +5651,19 @@ ORDER BY start_year, primary_title;"""
 </p>
 </details>
 
-<center>&diams;</center>
+<center>&bigotimes;</center> <br>  <br>
     
 <!--- G - Important Combinations - Average Worldwide Profits --->
    
-<details><summary><strong><center>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Profits.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Crew of the Important Genre & Creative Type Combinations based on Average Worldwide Profits.</strong></summary>
 <p>
     
 <!--- G - Important Combinations - Average Worldwide Profits - Directors --->
     
-<details><summary><strong><center>Click here to explore the Important Directors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Directors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Average Worldwide Profits/Directors/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5652,10 +5674,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Combinations - Average Worldwide Profits - Writers --->
     
-<details><summary><strong><center>Click here to explore the Important Writers.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Writers.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Average Worldwide Profits/Writers/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5666,10 +5688,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Combinations - Average Worldwide Profits - Actors --->
     
-<details><summary><strong><center>Click here to explore the Important Actors.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actors.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Average Worldwide Profits/Actors/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5680,10 +5702,10 @@ ORDER BY start_year, primary_title;"""
     
 <!--- G - Important Combinations - Average Worldwide Profits - Actresses --->
     
-<details><summary><strong><center>Click here to explore the Important Actresses.</center></strong></summary>
+<details align="center"><summary><strong>Click here to explore the Important Actresses.</strong></summary>
 <p>
 
-<details><summary><strong><center>Adventure & Kids Fiction</center></strong></summary>
+<details align="center"><summary><strong>Adventure & Kids Fiction</strong></summary>
 <p>
 <img src="visuals/G/Important Combinations/Average Worldwide Profits/Actresses/Adventure, Kids Fiction.jpeg"/>
 </p>
@@ -5707,17 +5729,27 @@ ORDER BY start_year, primary_title;"""
 <hr style="border:1.2px solid #009E25"> </hr>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As I mentioned in the [Standards for Qualifying as Important](#sect_standards) section, if there were less than nine movies made with a subcategory, but that subcategory's value for a metric was **greater than the max value of the Top 3** for that metric, it was added to this section. 
-&ensp;I again created more markdown tables to be display the information in the notebook.
+&ensp;I again created more markdown and HTML tables to be display the information in the README file and this notebook.
 
 <img src="special_texts/sub_sect_add_insights_pg.svg"/>
 <hr style="border:1.2px solid #2222FF"> </hr>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If any subcategory with the PG Rating had less than nine titles, but a greater value in a metric than the top subcategory in the corresponding visualization for that metric, its value was included in the corresponding table below.
 
+<table align="center" border="0">
+  <tr>
+    <td>
+
 |  Priority  |  Rating  |  Creative Type  |  Number of Titles  |  Amount Greater<br>than the<br>Top Average<br>Worldwide Gross  |  Amount Greater<br>than the<br>Top Average<br>Worldwide Profits  |
 |:----------:|:--------:|:---------------:|:------------------:|:--------------------------------------------------------------:|:----------------------------------------------------------------:|
-| 1&period;  |    PG    |   Super Hero    |         1          |                  &dollar;&nbsp;288.15&nbsp;M                   |                   &dollar;&nbsp;216.13&nbsp;M                    |
+| 1&period;  |    PG    |   Super Hero    |         1          |                  &dollar;&nbsp;288.15&nbsp;M                   |                   &dollar;&nbsp;216.13&nbsp;M                    |</td>
 
+  </tr>
+</table>
+
+<table align="center" border="0">
+  <tr>
+    <td>
 
 
 |  Priority  |  Rating  |  Genre & Creative Type<br>Combinations  |  Number of Titles  |  Amount Greater<br>than the<br>Top Average<br>Worldwide Gross  |  Amount Greater<br>than the<br>Top Average<br>Worldwide Profits  |
@@ -5725,7 +5757,10 @@ ORDER BY start_year, primary_title;"""
 | 1&period;  |    PG    |         Adventure & Super Hero          |         1          |                  &dollar;&nbsp;294.52&nbsp;M                   |                   &dollar;&nbsp;220.36&nbsp;M                    |
 | 2&period;  |    PG    |         Musical & Kids Fiction          |         4          |                  &dollar;&nbsp;271.63&nbsp;M                   |                   &dollar;&nbsp;199.96&nbsp;M                    |
 | 3&period;  |    PG    |            Musical & Fantasy            |         3          |                  &dollar;&nbsp;135.60&nbsp;M                   |                   &dollar;&nbsp;148.53&nbsp;M                    |
-| 4&period;  |    PG    |         Musical & Dramatization         |         1          |                   &dollar;&nbsp;29.06&nbsp;M                   |                    &dollar;&nbsp;35.90&nbsp;M                    |
+| 4&period;  |    PG    |         Musical & Dramatization         |         1          |                   &dollar;&nbsp;29.06&nbsp;M                   |                    &dollar;&nbsp;35.90&nbsp;M                    |</td>
+
+  </tr>
+</table>
 
 
 
@@ -5735,17 +5770,33 @@ ORDER BY start_year, primary_title;"""
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If any subcategory with the R Rating had less than nine titles, but a greater value in a metric than the top subcategory in the corresponding visualization for that metric, its value was included in the corresponding table below.
 
+<table align="center" border="0">
+  <tr>
+    <td>
+
 
 |  Priority  |  Rating  |  Genres   |  Number of Titles  |  Amount Greater<br>than the<br>Top Average<br>Worldwide Gross  |  Amount Greater<br>than the<br>Top Average<br>Worldwide Profits  |
 |:----------:|:--------:|:---------:|:------------------:|:--------------------------------------------------------------:|:----------------------------------------------------------------:|
-| 1&period;  |    R     | Adventure |         7          |                   &dollar;&nbsp;96.68&nbsp;M                   |                    &dollar;&nbsp;79.83&nbsp;M                    |
+| 1&period;  |    R     | Adventure |         7          |                   &dollar;&nbsp;96.68&nbsp;M                   |                    &dollar;&nbsp;79.83&nbsp;M                    |</td>
 
+  </tr>
+</table>
+
+<table align="center" border="0">
+  <tr>
+    <td>
 
 
 |  Priority  |  Rating  |  Creative Type  |  Number of Titles  |  Amount Greater<br>than the<br>Top Average<br>Worldwide Gross  |  Amount Greater<br>than the<br>Top Average<br>Worldwide Profits  |
 |:----------:|:--------:|:---------------:|:------------------:|:--------------------------------------------------------------:|:----------------------------------------------------------------:|
-| 1&period;  |    R     |   Super Hero    |         3          |                  &dollar;&nbsp;600.49&nbsp;M                   |                   &dollar;&nbsp;554.98&nbsp;M                    |
+| 1&period;  |    R     |   Super Hero    |         3          |                  &dollar;&nbsp;600.49&nbsp;M                   |                   &dollar;&nbsp;554.98&nbsp;M                    |</td>
 
+  </tr>
+</table>
+
+<table align="center" border="0">
+  <tr>
+    <td>
 
 
 |  Priority  |  Rating  |  Genre & Creative Type<br>Combinations  |  Number of Titles  |  Amount Greater<br>than the<br>Top Average<br>Worldwide Gross  |  Amount Greater<br>than the<br>Top Average<br>Worldwide Profits  |
@@ -5757,6 +5808,9 @@ ORDER BY start_year, primary_title;"""
 | 5&period;  |    R     |      Black Comedy & Dramatization       |         3          |                   &dollar;&nbsp;59.34&nbsp;M                   |                    &dollar;&nbsp;71.20&nbsp;M                    |
 | 6&period;  |    R     |            Comedy & Factual             |         1          |                                                                |                    &dollar;&nbsp;39.37&nbsp;M                    |
 | 7&period;  |    R     |        Horror & Science Fiction         |         4          |                   &dollar;&nbsp;9.64&nbsp;M                    |                    &dollar;&nbsp;24.70&nbsp;M                    |
-| 8&period;  |    R     |    Adventure & Contemporary Fiction     |         4          |                                                                |                    &dollar;&nbsp;2.96&nbsp;M                     |
+| 8&period;  |    R     |    Adventure & Contemporary Fiction     |         4          |                                                                |                    &dollar;&nbsp;2.96&nbsp;M                     |</td>
+
+  </tr>
+</table>
 
 # END OF PROJECT
