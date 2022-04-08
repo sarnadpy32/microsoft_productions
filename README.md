@@ -1,7 +1,7 @@
 | Main Version | PDF Version |
 | :-: | :-: |
 | <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/Phase%201%20-%20Project.ipynb">Analysis</a> | <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/notebook.pdf">Analysis</a> |
-| <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/Presentation.pptm">Presentation<a> | <font size="+9"><a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/pdf_presentation.pdf">Presentation</a></font> |
+| <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/Presentation.pptm">Presentation<a> | <a href="https://github.com/sarnadpy32/microsoft_productions/blob/master/pdf_presentation.pdf">Presentation</a> |
 
 <img src="special_texts/sect_project_overview.svg" />
 <hr style="border:1.2px solid #009E25"> </hr>
@@ -34,7 +34,9 @@
 <a id='sect_glad'></a>
 <img src='special_texts/sect_glad.svg' />
 <hr style="border:1.2px solid #009E25"> </hr>
-<img src="images/hypo_logo.png"/>
+<p align="center">
+    <img src="images/hypo_logo.png"/>
+<p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Microsoft is developing their own streaming service that will feature content which they intend to produce in-house.
 &ensp;As they are entering into an already crowded and competitive market, it would be advantageous for them to analyze which types of movies perform best at the box office, which would aslo provide insights into the viewing preferences of moviegoers, and then produce movies and/or television shows based on the insights gained from such an analysis.
