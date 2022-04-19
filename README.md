@@ -239,6 +239,10 @@ WHERE genres NOT Null;"""
 
 <details align="center"><summary><strong>Click Here to see the number of Movies with each Rating category.</strong></summary>
 <p>
+    
+<table align="center" border="0">
+  <tr>
+    <td>
 
 |  Ratings  |  Count  |
 |:---------:|:-------:|
@@ -246,7 +250,10 @@ WHERE genres NOT Null;"""
 |     R     |   382   |
 |    PG     |   161   |
 |     G     |   11    |
-| Not Rated |   10    |
+| Not Rated |   10    |</td>
+
+  </tr>
+</table>
     
 </p>
 </details>
@@ -256,16 +263,25 @@ WHERE genres NOT Null;"""
 <details align="center"><summary><strong>Click Here to see the extended details tables for the Rating categories.</strong></summary>
 <p>
     
+<table align="center" border="0">
+  <tr>
+    <td>
+    
 |  Worldwide Gross<br><br>Rating  |  count  |         mean          |          std          |          min           |         25%          |          50%          |          75%          |          max          |
 |:-------------------------------:|:-------:|:---------------------:|:---------------------:|:----------------------:|:--------------------:|:---------------------:|:---------------------:|:---------------------:|
 |                G                |   11    | &dollar;369.03&nbsp;M | &dollar;331.65&nbsp;M |  &dollar;27.47&nbsp;M  | &dollar;74.59&nbsp;M | &dollar;349.09&nbsp;M | &dollar;526.50&nbsp;M |  &dollar;1.07&nbsp;B  |
 |            Not Rated            |   10    | &dollar;54.75&nbsp;M  | &dollar;82.57&nbsp;M  | &dollar;247.56&nbsp;Th | &dollar;10.77&nbsp;M | &dollar;19.81&nbsp;M  | &dollar;61.43&nbsp;M  | &dollar;263.50&nbsp;M |
 |               PG                |   161   | &dollar;282.71&nbsp;M | &dollar;288.30&nbsp;M | &dollar;73.71&nbsp;Th  | &dollar;77.23&nbsp;M | &dollar;183.35&nbsp;M | &dollar;373.99&nbsp;M |  &dollar;1.27&nbsp;B  |
 |              PG-13              |   411   | &dollar;246.15&nbsp;M | &dollar;308.96&nbsp;M | &dollar;94.81&nbsp;Th  | &dollar;58.25&nbsp;M | &dollar;126.93&nbsp;M | &dollar;290.79&nbsp;M |  &dollar;2.05&nbsp;B  |
-|                R                |   382   | &dollar;99.36&nbsp;M  | &dollar;123.27&nbsp;M |  &dollar;3.47&nbsp;Th  | &dollar;20.80&nbsp;M | &dollar;59.91&nbsp;M  | &dollar;127.59&nbsp;M | &dollar;801.03&nbsp;M |
+|                R                |   382   | &dollar;99.36&nbsp;M  | &dollar;123.27&nbsp;M |  &dollar;3.47&nbsp;Th  | &dollar;20.80&nbsp;M | &dollar;59.91&nbsp;M  | &dollar;127.59&nbsp;M | &dollar;801.03&nbsp;M |</td>
+
+  </tr>
+</table>
 
 
-
+<table align="center" border="0">
+  <tr>
+    <td>
 
 |  Worldwide Profits<br><br>Rating  |  count  |         mean          |          std          |           min           |          25%           |          50%          |          75%          |          max          |
 |:---------------------------------:|:-------:|:---------------------:|:---------------------:|:-----------------------:|:----------------------:|:---------------------:|:---------------------:|:---------------------:|
@@ -273,7 +289,10 @@ WHERE genres NOT Null;"""
 |             Not Rated             |   10    | &dollar;35.02&nbsp;M  | &dollar;80.99&nbsp;M  | - &dollar;19.52&nbsp;M  | - &dollar;13.02&nbsp;M | - &dollar;1.93&nbsp;M | &dollar;48.65&nbsp;M  | &dollar;233.50&nbsp;M |
 |                PG                 |   161   | &dollar;201.01&nbsp;M | &dollar;256.86&nbsp;M | - &dollar;110.45&nbsp;M |  &dollar;29.16&nbsp;M  | &dollar;96.86&nbsp;M  | &dollar;290.36&nbsp;M |  &dollar;1.12&nbsp;B  |
 |               PG-13               |   411   | &dollar;169.15&nbsp;M | &dollar;256.16&nbsp;M | - &dollar;50.92&nbsp;M  |  &dollar;17.89&nbsp;M  | &dollar;70.94&nbsp;M  | &dollar;189.64&nbsp;M |  &dollar;1.75&nbsp;B  |
-|                 R                 |   382   | &dollar;63.79&nbsp;M  | &dollar;110.82&nbsp;M | - &dollar;50.33&nbsp;M  | - &dollar;3.95&nbsp;M  | &dollar;26.37&nbsp;M  | &dollar;82.58&nbsp;M  | &dollar;743.03&nbsp;M |
+|                 R                 |   382   | &dollar;63.79&nbsp;M  | &dollar;110.82&nbsp;M | - &dollar;50.33&nbsp;M  | - &dollar;3.95&nbsp;M  | &dollar;26.37&nbsp;M  | &dollar;82.58&nbsp;M  | &dollar;743.03&nbsp;M |</td>
+
+  </tr>
+</table>
 
 </p>
 </details>
@@ -291,6 +310,10 @@ WHERE genres NOT Null;"""
 <details align="center"><summary><strong>Click Here to see the number of Movies with each Genre subcategory.</strong></summary>
 <p>
 
+<table align="center" border="0">
+  <tr>
+    <td>
+    
 |       Genres        |  Count  |
 |:-------------------:|:-------:|
 |        Drama        |   219   |
@@ -303,7 +326,10 @@ WHERE genres NOT Null;"""
 |    Black Comedy     |   14    |
 |       Musical       |   13    |
 |       Western       |   10    |
-| Concert/Performance |    4    |
+| Concert/Performance |    4    |</td>
+
+  </tr>
+</table>
 
 </p>
 </details>
@@ -313,6 +339,10 @@ WHERE genres NOT Null;"""
 <details align="center"><summary><strong>Click Here to see the extended details tables for the Genre subcategories.</strong></summary>
 <p>
 
+<table align="center" border="0">
+  <tr>
+    <td>
+    
 |  Worldwide Gross<br><br>Genre  |  count  |         mean          |          std          |          min           |          25%          |          50%          |          75%          |          max          |
 |:------------------------------:|:-------:|:---------------------:|:---------------------:|:----------------------:|:---------------------:|:---------------------:|:---------------------:|:---------------------:|
 |             Action             |   174   | &dollar;341.79&nbsp;M | &dollar;383.57&nbsp;M |  &dollar;3.47&nbsp;Th  | &dollar;73.71&nbsp;M  | &dollar;194.68&nbsp;M | &dollar;492.31&nbsp;M |  &dollar;2.05&nbsp;B  |
@@ -325,10 +355,15 @@ WHERE genres NOT Null;"""
 |            Musical             |   13    | &dollar;392.66&nbsp;M | &dollar;443.11&nbsp;M |  &dollar;7.29&nbsp;M   | &dollar;61.03&nbsp;M  | &dollar;213.12&nbsp;M | &dollar;586.48&nbsp;M |  &dollar;1.27&nbsp;B  |
 |        Romantic Comedy         |   39    | &dollar;86.00&nbsp;M  | &dollar;59.62&nbsp;M  | &dollar;94.81&nbsp;Th  | &dollar;41.65&nbsp;M  | &dollar;74.33&nbsp;M  | &dollar;130.54&nbsp;M | &dollar;238.10&nbsp;M |
 |       Thriller/Suspense        |   131   | &dollar;127.08&nbsp;M | &dollar;160.76&nbsp;M | &dollar;261.36&nbsp;Th | &dollar;31.04&nbsp;M  | &dollar;67.26&nbsp;M  | &dollar;154.26&nbsp;M | &dollar;835.52&nbsp;M |
-|            Western             |   10    | &dollar;145.35&nbsp;M | &dollar;143.49&nbsp;M |  &dollar;8.22&nbsp;M   | &dollar;19.25&nbsp;M  | &dollar;130.66&nbsp;M | &dollar;229.84&nbsp;M | &dollar;449.95&nbsp;M |
+|            Western             |   10    | &dollar;145.35&nbsp;M | &dollar;143.49&nbsp;M |  &dollar;8.22&nbsp;M   | &dollar;19.25&nbsp;M  | &dollar;130.66&nbsp;M | &dollar;229.84&nbsp;M | &dollar;449.95&nbsp;M |</td>
+
+  </tr>
+</table>
 
 
-
+<table align="center" border="0">
+  <tr>
+    <td>
 
 |  Worldwide Profits<br><br>Genre  |  count  |         mean          |          std          |           min           |          25%           |          50%          |          75%          |          max          |
 |:--------------------------------:|:-------:|:---------------------:|:---------------------:|:-----------------------:|:----------------------:|:---------------------:|:---------------------:|:---------------------:|
@@ -342,7 +377,10 @@ WHERE genres NOT Null;"""
 |             Musical              |   13    | &dollar;302.34&nbsp;M | &dollar;399.76&nbsp;M | - &dollar;69.53&nbsp;M  |  &dollar;3.66&nbsp;M   | &dollar;156.92&nbsp;M | &dollar;406.35&nbsp;M |  &dollar;1.12&nbsp;B  |
 |         Romantic Comedy          |   39    | &dollar;56.80&nbsp;M  | &dollar;51.25&nbsp;M  | - &dollar;23.61&nbsp;M  |  &dollar;17.81&nbsp;M  | &dollar;46.03&nbsp;M  | &dollar;90.81&nbsp;M  | &dollar;208.10&nbsp;M |
 |        Thriller/Suspense         |   131   | &dollar;82.63&nbsp;M  | &dollar;137.60&nbsp;M | - &dollar;50.33&nbsp;M  |  &dollar;4.69&nbsp;M   | &dollar;36.74&nbsp;M  | &dollar;110.06&nbsp;M | &dollar;675.52&nbsp;M |
-|             Western              |   10    | &dollar;72.35&nbsp;M  | &dollar;122.70&nbsp;M | - &dollar;33.49&nbsp;M  | - &dollar;13.19&nbsp;M | &dollar;39.52&nbsp;M  | &dollar;82.53&nbsp;M  | &dollar;349.95&nbsp;M |
+|             Western              |   10    | &dollar;72.35&nbsp;M  | &dollar;122.70&nbsp;M | - &dollar;33.49&nbsp;M  | - &dollar;13.19&nbsp;M | &dollar;39.52&nbsp;M  | &dollar;82.53&nbsp;M  | &dollar;349.95&nbsp;M |</td>
+
+  </tr>
+</table>
     
 </p>
 </details>
@@ -359,6 +397,10 @@ WHERE genres NOT Null;"""
 
 <details align="center"><summary><strong>Click Here to see the number of Movies with each Creative Type subcategory.</strong></summary>
 <p>
+    
+<table align="center" border="0">
+  <tr>
+    <td>
 
 |     Creative Types      |  Count  |
 |:-----------------------:|:-------:|
@@ -370,7 +412,10 @@ WHERE genres NOT Null;"""
 |   Historical Fiction    |   91    |
 |       Super Hero        |   39    |
 |         Factual         |    5    |
-| Multiple Creative Types |    2    |
+| Multiple Creative Types |    2    |</td>
+
+  </tr>
+</table>
     
 </p>
 </details>
@@ -380,6 +425,10 @@ WHERE genres NOT Null;"""
 <details align="center"><summary><strong>Click Here to see the extended details tables for the Creative Type subcategories.</strong></summary>
 <p>
 
+<table align="center" border="0">
+  <tr>
+    <td>
+    
 |  Worldwide Gross<br><br>Creative_Type  |  count  |         mean          |          std          |          min           |          25%          |          50%          |          75%          |          max          |
 |:--------------------------------------:|:-------:|:---------------------:|:---------------------:|:----------------------:|:---------------------:|:---------------------:|:---------------------:|:---------------------:|
 |          Contemporary Fiction          |   432   | &dollar;112.99&nbsp;M | &dollar;149.50&nbsp;M |  &dollar;3.47&nbsp;Th  | &dollar;33.95&nbsp;M  | &dollar;70.62&nbsp;M  | &dollar;141.22&nbsp;M |  &dollar;1.52&nbsp;B  |
@@ -390,10 +439,15 @@ WHERE genres NOT Null;"""
 |              Kids Fiction              |   94    | &dollar;361.38&nbsp;M | &dollar;310.95&nbsp;M | &dollar;73.71&nbsp;Th  | &dollar;115.40&nbsp;M | &dollar;280.64&nbsp;M | &dollar;524.71&nbsp;M |  &dollar;1.27&nbsp;B  |
 |        Multiple Creative Types         |    2    | &dollar;80.92&nbsp;M  | &dollar;70.36&nbsp;M  |  &dollar;31.16&nbsp;M  | &dollar;56.04&nbsp;M  | &dollar;80.92&nbsp;M  | &dollar;105.80&nbsp;M | &dollar;130.67&nbsp;M |
 |            Science Fiction             |   110   | &dollar;283.91&nbsp;M | &dollar;301.49&nbsp;M | &dollar;261.36&nbsp;Th | &dollar;67.12&nbsp;M  | &dollar;192.56&nbsp;M | &dollar;397.88&nbsp;M |  &dollar;1.65&nbsp;B  |
-|               Super Hero               |   39    | &dollar;749.16&nbsp;M | &dollar;380.79&nbsp;M | &dollar;167.85&nbsp;M  | &dollar;530.70&nbsp;M | &dollar;709.00&nbsp;M | &dollar;850.30&nbsp;M |  &dollar;2.05&nbsp;B  |
+|               Super Hero               |   39    | &dollar;749.16&nbsp;M | &dollar;380.79&nbsp;M | &dollar;167.85&nbsp;M  | &dollar;530.70&nbsp;M | &dollar;709.00&nbsp;M | &dollar;850.30&nbsp;M |  &dollar;2.05&nbsp;B  |</td>
+
+  </tr>
+</table>
 
 
-
+<table align="center" border="0">
+  <tr>
+    <td>
 
 |  Worldwide Profits<br><br>Creative_Type  |  count  |         mean          |          std          |           min           |          25%           |          50%          |          75%          |          max          |
 |:----------------------------------------:|:-------:|:---------------------:|:---------------------:|:-----------------------:|:----------------------:|:---------------------:|:---------------------:|:---------------------:|
@@ -405,7 +459,10 @@ WHERE genres NOT Null;"""
 |               Kids Fiction               |   94    | &dollar;266.61&nbsp;M | &dollar;280.36&nbsp;M | - &dollar;69.53&nbsp;M  |  &dollar;53.36&nbsp;M  | &dollar;162.35&nbsp;M | &dollar;388.59&nbsp;M |  &dollar;1.12&nbsp;B  |
 |         Multiple Creative Types          |    2    | &dollar;24.92&nbsp;M  |  &dollar;5.31&nbsp;M  |  &dollar;21.16&nbsp;M   |  &dollar;23.04&nbsp;M  | &dollar;24.92&nbsp;M  | &dollar;26.80&nbsp;M  | &dollar;28.67&nbsp;M  |
 |             Science Fiction              |   110   | &dollar;191.38&nbsp;M | &dollar;260.18&nbsp;M | - &dollar;110.45&nbsp;M |  &dollar;21.98&nbsp;M  | &dollar;97.83&nbsp;M  | &dollar;270.43&nbsp;M |  &dollar;1.43&nbsp;B  |
-|                Super Hero                |   39    | &dollar;570.97&nbsp;M | &dollar;347.43&nbsp;M |  &dollar;19.54&nbsp;M   | &dollar;362.27&nbsp;M  | &dollar;511.40&nbsp;M | &dollar;690.92&nbsp;M |  &dollar;1.75&nbsp;B  |
+|                Super Hero                |   39    | &dollar;570.97&nbsp;M | &dollar;347.43&nbsp;M |  &dollar;19.54&nbsp;M   | &dollar;362.27&nbsp;M  | &dollar;511.40&nbsp;M | &dollar;690.92&nbsp;M |  &dollar;1.75&nbsp;B  |</td>
+
+  </tr>
+</table>
 
 </p>
 </details>
